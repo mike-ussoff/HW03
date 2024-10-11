@@ -14,7 +14,7 @@ from
 	select array_to_json(array_agg(row_to_json(d))) as stockitems
 	from 
 	(
-    	select stockitemid, stockitemname
+		select stockitemid, stockitemname
 		from warehouse.stockitems	
 		where searchdetails ilike '%' || searchtext || '%'
 		order by stockitemname
